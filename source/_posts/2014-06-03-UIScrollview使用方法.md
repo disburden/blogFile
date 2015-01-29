@@ -36,7 +36,8 @@ categories: objc
 ```  
 
 其他一些属性说明  
-<!--more—>
+
+<!--more-->
   
 indicatorStyle  
 滚动条的样式，基本只是设置颜色。总共3个颜色：默认、黑、白  
