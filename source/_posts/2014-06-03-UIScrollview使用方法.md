@@ -11,6 +11,7 @@ categories: objc
 //垂直拖动的时候显示垂直滚动条(如果有)
     scr_view.showsVerticalScrollIndicator=NO;
 
+
 //水平拖动时显示水平滚动条(如果有)
     scr_view.showsHorizontalScrollIndicator=NO;
 
@@ -35,7 +36,7 @@ categories: objc
 ```  
 
 其他一些属性说明  
-<!--more-->
+<!--more—>
   
 indicatorStyle  
 滚动条的样式，基本只是设置颜色。总共3个颜色：默认、黑、白  
