@@ -7,6 +7,9 @@ categories: objc
 ---
 
 ### 1.UIImagePickerController的静态方法:
+
+<!--more-->
+
 ```objective-c  
     imagepicker = [[UIImagePickerController alloc]init];
     //UIImagePickerController静态方法判断设备是否支持照相机／图片库／相册功能
@@ -75,7 +78,7 @@ isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
         NSLog(@"media types:%@",type);
     }
 ```  
-<!--more-->
+
 
 ### 2.UIImagePickerController属性详解：
 ```objective-c  

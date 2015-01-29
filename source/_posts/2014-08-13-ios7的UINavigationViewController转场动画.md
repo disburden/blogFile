@@ -1,6 +1,6 @@
 title: ios7的UINavigationViewController转场动画
 date: 2014-08-13 10:26:49
-tags:
+tags: objc
 ---
 ios7中的UINavigationController新增加了两个协议方法  
 
