@@ -76,10 +76,10 @@ OBJC_ASSOCIATION_ASSIGN);
 这句话.objc_setAssociatedObject是实现动态添加属性的关键,他有4个参数  
 a.源对象,就是你的属性要添加给谁  
 b.key,属性的标识,必须唯一,set方法就是通过这个来读取的,一般定义为static  
-c.属相的值(必须是个对象)  
+c.新增的属性的值(必须是个对象)  
 d.关联方式,可以通过 objc_AssociationPolicy来查看有哪些方式  
 
-5.set方法就是直接通过新增属性的key来读取对应的值
+5.get方法就是直接通过新增属性的key来读取对应的值
 return [objc_getAssociatedObject(self,@"isSelected") boolValue];
 
 
