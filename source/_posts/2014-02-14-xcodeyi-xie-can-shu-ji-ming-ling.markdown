@@ -36,8 +36,8 @@ Thread 0 Crashed:
 然后回到我们应用程序的build目录，目录下一定要包含MyApp.app 和MyApp.app.dSYM两个文件。
 在控制台使用dwarfdump命令，解析出内存地址，如： 
 dwarfdump –lookup 0x000036d2 –arch armv6 MyApp.app.dSYM
-输出信息如下：
-{% img /images/2014/01/08341385206089.jpg %}
+输出信息如下：  
+![title](http://7vznx2.com1.z0.glb.clouddn.com/20140101001.jpg)
 
 ### 6.nm,strings,otool
 这三个工具的用发都是一样的,先将应用打包成ipa文件,比如现在有个app叫做abc,打包成abc.ipa后,将期解压出
