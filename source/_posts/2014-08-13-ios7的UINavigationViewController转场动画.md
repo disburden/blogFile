@@ -27,26 +27,29 @@ ios7中的UINavigationController新增加了两个协议方法
 这个类本身也可以定义一些协议方法,这样互动性会变的很强.先看看UIViewControllerAnimatedTransitioning这个协议要实现哪些方法
 只有两个  
 
-  
-` - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext;
-- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext;`
+```objective-c  
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext;
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext;
+```
  
 
 很明细第一个方法肯定就是返回动画的时长.
 第二就是实现动画效果,有一个参数transitionContext,这个参数包含了一个容器(UIView),这个容器包含了转场涉及到的两个viewController,可以通过下面这种方式获取到两个vc
 先获取容器
 
- 
-`UIView *containerView = [transitionContext
-                             containerView];`
+```objective-c   
+UIView *containerView = [transitionContext
+                             containerView];
+```
 
 
 
 通过容器获取两个vc  
-`    UIViewController *fromViewController = [transitionContext
+```objective-c  
+    UIViewController *fromViewController = [transitionContext
                                             viewControllerForKey:UITransitionContextFromViewControllerKey
                                             ];
     UIViewController *toViewController = [transitionContext
                                           viewControllerForKey:UITransitionContextToViewControllerKey];
-`
-只有就可以通过这两个vc做你想要的动画效果.
+```
+之后就可以通过这两个vc做你想要的动画效果.
