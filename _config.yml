@@ -88,10 +88,10 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy: 
-  type: github
-  repository: ssh://git@github.com/disburden/disburden.github.com.git
-  #repository: https://github.com/disburden/disburden.github.com.git
-  brandh: master
+  type: git
+  repo:
+    github: ssh://git@github.com/disburden/disburden.github.com.git,master
+    gitcafe: https://gitcafe.com/disburden/disburden.git,gitcafe-pages
 
 # duoshuo http://dev.duoshuo.com/user/447570
 duoshuo_shortname: disburden
