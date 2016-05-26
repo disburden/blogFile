@@ -90,9 +90,7 @@ exclude_generator:
 deploy: 
   type: git
   repo: 
-    #github: https://github.com/disburden/disburden.github.com.git,master
-    #gitcafe: https://gitcafe.com/disburden/disburden.git,gitcafe-pages
-    gitcafe: https://git.coding.net/disburden/disburden.git,gitcafe-pages
+    github: https://github.com/disburden/disburden.github.com.git,master
 
 # duoshuo http://dev.duoshuo.com/user/447570
 duoshuo_shortname: disburden
