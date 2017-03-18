@@ -4,6 +4,7 @@ title: "关于苹果开发者证书的那些事"
 date: 2013-11-27 00:32:17 +0800
 comments: true
 categories: objc
+tags: [苹果,开发者证书,原创]
 ---
 这些东西都是根据自己的理解写的,估计有很多错误的地方,如果大家有发现什么不对的,麻烦跟我说一下.
 尊重劳动者,转载请注明出处
@@ -84,3 +85,5 @@ bundle identifier,在这里应该输入com.ddd.test
 50.选择菜单product->scheme->edit scheme,在弹出的窗口中选择左边最底部的archive,然后将对应的Build
 Configuration选择为publish  
 51.大功告成  
+
+### 原创文章,转载请注明出处,谢谢! ###

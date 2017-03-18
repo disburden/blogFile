@@ -4,11 +4,11 @@ title: "XCode工程内多Targets教程"
 date: 2014-02-14 11:41:15 +0800
 comments: true
 categories: objc
+tags: [XCode,Targets,教程]
 ---
 
-相信很多人都注意到XCode中, 有个Target的概念. 这在很多地方都有所体现, 比如打开一个工程后, 左侧的列表
-中有Targets一项, 而在工程界面的顶部菜单中, project里面也有多个涉及到Target的项目, 那么这个Target到底
-是什么呢?  
+相信很多人都注意到XCode中, 有个Target的概念. 这在很多地方都有所体现, 比如打开一个工程后, 左侧的列表中有Targets一项, 而在工程界面的顶部菜单中, project里面也有多个涉及到Target的项目, 那么这个Target到底是什么呢?  
+<!--more-->
  Apple 的人是这样说的:“ Targets that define the products to build. A target organizes the files
 and instructions needed to build a product into a sequence of build actions that can be taken.”  
  简单的理解的话, 可以认为一个target对应一个新的product(基于同一份代码的情况下). 但都一份代码了,
@@ -18,7 +18,6 @@ and instructions needed to build a product into a sequence of build actions that
  我们来举几个典型的应用多Targets的情况吧, 比如完整版和lite版; 比如同一个游戏的20关, 30关, 50关版;
 再或者比如同一个游戏换些资源和名字就当新游戏卖的(喂喂, 你在教些什么...)  
 
-<!--more-->
 
 ## Targets之间, 什么相同, 什么不同!  
 

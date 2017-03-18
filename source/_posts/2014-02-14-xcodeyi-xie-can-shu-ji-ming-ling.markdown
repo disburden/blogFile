@@ -4,7 +4,11 @@ title: "xcode一些参数及命令"
 date: 2014-02-14 10:54:20 +0800
 comments: true
 categories: objc
+tags: [xcode,参数,命令,原创]
 ---
+xcode其实有很多的命令可以帮助大家更好的查看一些信息,有些命令在调试bug的时候非常有用,这里记录几个我用过的命令
+
+<!--more-->
 
 ### 1. codesign
 codesign -dvvv /path/to/MyGreatApp.app
@@ -15,7 +19,7 @@ codesign -d --entitlements - /path/to/MyGreatApp.app
 这个命令还不知道具体干什么的
 --entitlements这个参数认不到,直接删掉可以看到一句话的信息,要再研究一下
 
-<!--more-->
+
 
 ### 2.security
 security cms -D -i /path/to/MyAdHocProfile1.mobileprovision
@@ -34,9 +38,9 @@ Thread 0 Crashed:
 1   MyApp               0x000036d2 0×1000 + 9938﻿
 我们得到了用户发生崩溃情况的内存地址：0x000036d2﻿
 然后回到我们应用程序的build目录，目录下一定要包含MyApp.app 和MyApp.app.dSYM两个文件。
-在控制台使用dwarfdump命令，解析出内存地址，如： 
+在控制台使用dwarfdump命令，解析出内存地址，如：
 dwarfdump –lookup 0x000036d2 –arch armv6 MyApp.app.dSYM
-输出信息如下：  
+输出信息如下：
 ![title](http://7vznx2.com1.z0.glb.clouddn.com/20140101001.jpg)
 
 ### 6.nm,strings,otool
@@ -44,3 +48,6 @@ dwarfdump –lookup 0x000036d2 –arch armv6 MyApp.app.dSYM
 来,然后进入abc.app目录执行nm abc就可以了,strings也是一样的执行方式,otool要造加参数ov(otool -ov abc)
 
 这三个命令的主要作用就是列出app所有调用到的函数,具体的区别在哪还没去研究
+(持续更新)
+
+### 原创文章,转载请注明出处,谢谢! ###

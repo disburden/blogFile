@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "NSUserDefaults的常用方法"
+title: "NSUserDefaults的使用方法"
 date: 2013-11-26 17:25:44 +0800
 comments: true
 categories: objc
+tags: [NSUserDefaults,使用,方法]
 ---
-NSUserDefaults是ios通过内置一个plist文件来存储用户的键值对信息,使用起来很方便.在前面的文章中提到的
-settings bundle也是使用NSUserDefaults来存储信息的.由于是键值对的保存方式,所以通常只能存储NSString,
-NSNumber, NSDate, NSArray, NSDictionary.以及一些基础类型的数据.常用的一些使用方法如下
+NSUserDefaults是ios通过内置一个plist文件来存储用户的键值对信息,使用起来很方便.在前面的文章中提到的settings bundle也是使用NSUserDefaults来存储信息的.由于是键值对的保存方式,所以通常只能存储NSString,NSNumber,NSDate, NSArray, NSDictionary.以及一些基础类型的数据.常用的一些使用方法如下
 
 <!--more-->
 
-```objective-c code
+```
 //要操作NSUserDefaults之前必须先创建他的对象
 NSUserDefaults *ud=[NSUserDefaults standardUserDefaults];
 
@@ -58,7 +57,7 @@ if (![ud boolForKey:@"everLaunched"]) {
 else{
     [ud setBool:NO forKey:@"firstLaunch"];
 }
-    
+
 if ([ud boolForKey:@"firstLaunch"])
 {
     [ud setObject:@"ldl" forKey:@"server"];

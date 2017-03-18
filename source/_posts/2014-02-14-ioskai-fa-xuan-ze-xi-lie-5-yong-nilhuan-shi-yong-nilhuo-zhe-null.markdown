@@ -1,16 +1,17 @@
 ---
 layout: post
-title: "ios开发选择系列(5):用nil还是用Nil或者NULL"
+title: "ios开发选择系列-5:用nil还是用Nil或者NULL"
 date: 2014-02-14 09:50:00 +0800
 comments: true
 categories: objc
+tags: [ios开发选择系列,原创]
 ---
 
-很简单,如果你是要判断(或者赋值)一个实例是否存在就用nil,如果你是要判断一个类是否存在就用Nil,如果你要判断一个基本数据类型,比如 
+很简单,如果你是要判断(或者赋值)一个实例是否存在就用nil,如果你是要判断一个类是否存在就用Nil,如果你要判断一个基本数据类型,比如
 ```
-intint *pointerToInt = NULL;   
-charchar *pointerToChar = NULL;   
-struct TreeNode *rootNode = NULL; 
+int *pointerToInt = NULL;
+charchar *pointerToChar = NULL;
+struct TreeNode *rootNode = NULL;
 ```
 为空就用NULL
 
@@ -23,3 +24,5 @@ NSNull:这个是货真价实的对象,他是实际存在的,而不是0,由于他
 
 很多时候他们可以通用的,有区别的时候很少,举个栗子说明一下区别的地方
 null常常用来表示一个空的对象,而nil则经常用做结束标志,比如在数组中经常用nil作为结尾,那么如果你有特殊需求的,确实需要在数组中插入一个空对象怎么办?放了nil数组就会结束了,解决办法就是把nil封装成一个对象放到数组中,前面提到了NSNull就是解决这个问题的.
+
+### 原创文章,转载请注明出处,谢谢! ###
